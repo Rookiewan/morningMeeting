@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zn-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>morningMeeting</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="wrap">
+        <audio src="resources/startMusic.mp3" id='startMusic'></audio>
+        <audio src='resources/gunShot.wav' id='gunshot'></audio>
+        <audio src="resources/gameover.mp3" id='gameoverMusic'></audio>
+        <audio src="resources/backgroundMusic.mp3" id='backgroundMusic' loop='loop'></audio>
+        <div class="canvas-wrap">
+            <canvas id="canvas" class="canvas" width="900" height="600"></canvas>
+        </div>
+        <div class='opts'>
+            <div class="opts-inner">
+                <a href="javascript:;" class="startGame" id="startGame">早会开始</a>
+            </div>
+        </div>
+        <div class='textInfos' id='textInfos'>
+            <div class="inner">
+                <div class="blackboard-wrap">
+                    <div class="blackboard">
+                        <div class="page2" id='page2'>
+                            <h2>大家早上好</h2>
+                        </div>
+                        <div class="page3" id='page3'>
+                            <div class="sub-page sub-page-1">
+                                <h2>2018年各级各类学校开齐开足美育课</h2>
+                                <p>
+                                    国务院办公厅印发《关于全面加强和改进学校美育工作的意见》，从课程体系构建、教育教学改革、社会美育资源的统筹等方面，对美育工作提出了明确要求。到2018年，美育资源配置逐步优化，管理机制进一步完善，各级各类学校开齐开足美育课程；到2020年，初步形成大中小幼美育相互衔接、课堂教学和课外活动相互结合、普及教育与专业教育相互促进、学校美育和社会家庭美育相互联系的具有中国特色的现代化美育体系。
+                                </p>
+                            </div>
+                            <div class="sub-page sub-page-2">
+                                <h2>文化长城2500万投资慧科教育，终止收购水晶球教育</h2>
+                                <p>
+                                    慧科教育成立于2010年，提供移动互联网、云计算、大数据、互联网营销、物联网、可穿戴设备、在线教育、互联网金融等10个领域专业方向的培养方案、课程体系和教学资源，目前在线精品课程已超过900门。为高校、企业、产业园区等客户提供定制化教育解决方案，目前已与14所985院校、全国375所高校开展高校邦MOOC平台服务。文化长城此前主营艺术陶瓷业务，近年开始布局文化产业战略，教育领域是其新近开展的业务板块之一，希望将主营业务由单一的艺术陶瓷业务向艺术陶瓷业务与教育产业双主业模式转变。
+                                </p>
+                            </div>
+                            <div class="sub-page sub-page-3">
+                                <h2>在线一对一辅导一米辅导获得精锐教育千万元天使投资</h2>
+                                <p>
+                                    一米辅导主要目标客户是工薪家庭,采取自营模式，所有教师是由一米辅导选拔、培训、考核。在一米辅导APP中，目前入驻的教师有小学、初中、高中老师，辅导科目涵盖了小、初、高的所有学科。在学生学习过程中，会有“一米信使”全程跟踪学生学习过程，实时提醒学习任务。MPSS教学系统由“教学环”和“系统环”双环组成。教学环包括：全方位测评诊断、1对1系统辅导、解惑性答疑、回顾式课堂、名师大课堂。其中，回顾式课堂是指将每个学生的辅导及答疑全程课程录像生成学生自己的私人课程库，学生可以反复进行复习;系统环指一米辅导在教学过程中运用的网络技术和实时反馈的客户评价教学质量保障系统以及“一米信使”服务。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="page4" id='page4'>
+                            <div class="sub-page sub-page-1">
+                                <h2>欢迎新伙伴</h2>
+                                <p>
+                                    陈淑真，来自网中网，部门 会计云
+                                </p>
+                                <p>
+                                    张锦兰，来自网中网，部门 财务服务部
+                                </p>
+                            </div>
+                        </div>
+                        <div class="page5" id='page5'>
+                            <h2>张总分享</h2>
+                        </div>
+                        <div class="page6" id='page6'>
+                            <div class="sub-page sub-page-1">
+                                <video src="resources/beUnite.mp4" preload id='video'></video>
+                            </div>
+                            <div class="sub-page sub-page-2">
+                                <h2>个人分享</h2>
+                                <p>
+                                    It's smarter to travel in groups.
+                                </p>
+                                <p>
+                                    一个团结协作的系统理念的建立，需要很多人的努力，希望优芽的伙伴们团结起来，带领公司走向辉煌。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="page7" id='page7'>
+                            <h2>GAME OVER</h2>
+                        </div>
+                        <div class="earser-curtain" id='earser-curtain'></div>
+                    </div>
+                    <div class="eraser" id='earser'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/conmonFunctions.js"></script>
+    <script src="js/keyboardControl.js"></script>
+    <script src="js/leadRole.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src='js/boss.js'></script>
+    <script src='js/bossBullet.js'></script>
+    <script src="js/bullet.js"></script>
+    <script src='js/textInfo.js'></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
